@@ -1,0 +1,36 @@
+.about {
+    user-select: none;
+    font-family: $font;
+    @include desktop {
+        @include fr;
+        height: 35vh;
+    }
+    .img1, .img2 {
+        width: $ff;
+        @include desktop {
+            width: 28vw;
+        }
+        img {
+            width: $ff;
+            height: $ff;
+        }
+    }
+    .aboutContent {
+        @include desktop {
+            width: 45vw;
+        }
+        padding: 3rem 2rem;
+        @include tablet {
+            padding: 5rem 20%;
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        p {
+            margin-top: 1rem;
+            color: $Dark-Gray;
+            font-size: .8rem;
+            line-height: 1.5;
+        }
+    }
+}

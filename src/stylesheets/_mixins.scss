@@ -1,0 +1,28 @@
+@mixin fr {
+    display: flex;
+    flex-direction: row;
+}
+@mixin fc {
+    display: flex;
+    flex-direction: column;
+}
+@mixin cc {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+@mixin bs($x, $y, $blur, $c) {
+    -webkit-box-shadow: $x $y $blur $c;
+    box-shadow: $x $y $blur $c;
+}

@@ -1,0 +1,86 @@
+.mobileNav {
+    user-select: none;
+    @include fr; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    font-family: $font;
+    .icon, .close {
+        font-size: 1.7rem;
+        color: white;
+        cursor: pointer;
+    }
+    .close {
+        color: gray;
+        @include tablet {
+            margin-left: -7rem;
+        }
+    }
+    .logo {
+        width: 5rem;
+        margin: 0 auto;
+        img {
+            width: $ff;
+        }
+    }
+
+    .content {
+        width: 0vw;
+        transition: .2s linear;
+        overflow: hidden;
+        height: 6rem;
+        position: absolute;
+        background: white;
+        top: 0;
+        left: 0;
+        @include fr;
+        align-items:center;
+        justify-content: space-around;
+        .close {
+            width: 2rem;
+            height: 2rem;
+            @include fc;
+            @include cc;
+            
+        }
+        .inner {
+            @include fr;
+            @include cc;
+            height: 100%;
+            
+            li {
+                margin: 0 .5rem;
+                text-transform: capitalize;
+                font-size: .8rem;
+            }
+        }
+    }
+    .open {
+        width: 100vw;
+    }
+}
+.desktopNav {
+    font-family: $font;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    @include fr;
+    padding: 3rem;
+    .logo {
+        margin-right: 1rem;
+    }
+    
+    .inner {
+     @include fr; 
+     li {
+         color: white;
+         margin: 0 2rem;
+     }  
+    }
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+//abstract imports
+@import "reset";
+@import "variables";
+@import "mixins";
+
+
+//components 
+@import "components/nav";
+@import "components/card";
+@import "components/about";

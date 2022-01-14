@@ -1,0 +1,101 @@
+.card {
+    user-select: none;
+    width: 100%;
+    font-family: $font;
+    @include desktop {
+        @include fr;
+        height: 65vh;
+    }
+    .image {
+        position: relative;
+        height: 45vh;
+        transition: .1s ease;
+        @include desktop {
+            height: $ff;
+        }
+        @include tablet {
+            height: 80vh;
+        }
+        img {
+            width: $ff;
+            height: $ff;
+        }
+        .buttons {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include fr;
+            flex-direction: row-reverse;
+            @include desktop {
+                right: -8rem;
+            }
+            .left, .right{
+               color: white;
+               background-color: $Black;
+               width: 3.5rem;
+               height: 3.5rem;
+               @include desktop {
+                   width: 4rem;
+                   height: 4rem;
+               }
+               @include fr;
+               @include cc; 
+               cursor: pointer;
+               &:hover {
+                background-color: $Very-Dark-Gray;
+               }
+            }
+        }
+        @include desktop {
+            width: 50vw;
+        }
+    }
+    .content {
+        padding: 5rem 1.5rem 1rem;
+        text-align: left;
+        height: 55vh;
+        @include fc;
+        @include desktop {
+            width: 50vw;
+            padding: 5rem 10% 1rem;
+            height: $ff;
+        }
+        @include tablet {
+            padding: 5rem 20% 1rem;
+        }
+        justify-content: space-between;
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+        p {
+            color: $Dark-Gray;
+            line-height: 1.5;
+            font-size: .8rem;
+            margin-top: 1.5rem;
+            @include desktop {
+                margin: 0;
+            }
+        }
+        .shop {
+            @include fr;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 3rem 0;
+            cursor: pointer;
+            @include desktop {
+                margin: 0;
+                margin-bottom: 8rem;
+            }
+           > p {
+                text-transform: uppercase;
+                font-size: .95rem;
+                color: $Very-Dark-Gray;
+                letter-spacing: .5rem;
+                margin: 0;
+                margin-right: 2rem;
+            }
+        }
+    }
+
+}
